@@ -1,17 +1,35 @@
 {
-  "name": "my-ui-lib",
-  "private": true,
-  "version": "0.0.0",
+  "name": "moca-ui-lib-testing",
+  "private": false,
+  "version": "1.0.0",
   "type": "module",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "author": "Moca",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "public",
+    "src/index.css"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build:css": "tailwindcss -i ./src/index.css -o ./dist/style.css --minify",
+    "build": "pnpm build:css && tsc -b && vite build"
   },
   "dependencies": {
+    "@tailwindcss/cli": "^4.1.7",
+    "@types/node": "^22.15.21",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
@@ -25,6 +43,7 @@
     "@storybook/react": "8.6.14",
     "@storybook/react-vite": "8.6.14",
     "@storybook/test": "8.6.14",
+    "@tailwindcss/postcss": "^4.1.7",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
@@ -50,5 +69,9 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
   }
 }
