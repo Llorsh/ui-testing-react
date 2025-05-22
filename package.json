@@ -1,6 +1,6 @@
 {
   "name": "moca-ui-lib-testing",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "private": false,
   "type": "module",
   "main": "dist/index.js",
@@ -9,6 +9,9 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
+    },
+    "./dist/style.css": {
+      "default": "./dist/style.css"
     }
   },
   "files": [
