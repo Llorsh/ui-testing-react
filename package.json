@@ -1,7 +1,7 @@
 {
   "name": "moca-ui-lib-testing",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
