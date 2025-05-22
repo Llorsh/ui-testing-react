@@ -1,7 +1,7 @@
 {
   "name": "moca-ui-lib-testing",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
@@ -16,7 +16,8 @@
   "files": [
     "dist",
     "public",
-    "src/index.css"
+    "src/index.css",
+    "src"
   ],
   "scripts": {
     "dev": "vite",
